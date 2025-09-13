@@ -1,0 +1,116 @@
+{
+  "name": "zyn-cpp-core",
+  "displayName": "zynC++ Core",
+  "publisher": "zynther",
+  "version": "0.1.0",
+  "description": "Core extension: Solution explorer, commands, status bar, toolchain doctor",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:zyn.openSolution",
+    "onCommand:zyn.build",
+    "onCommand:zyn.setConfiguration"
+  ],
+  "contributes": {
+    "commands": [
+      {"command":"zyn.openSolution","title":"Open Solution (.sln/.cmake)"},
+      {"command":"zyn.build","title":"Build Solution"},
+      {"command":"zyn.clean","title":"Clean Solution"},
+      {"command":"zyn.setConfiguration","title":"Set Configuration"},
+      {"command":"zyn.setPlatform","title":"Set Platform (x64/arm64)"},
+      {"command":"zyn.setCompilerKit","title":"Set Compiler Kit (MSVC/Clang/GCC)"},
+      {"command":"zyn.debug","title":"Debug Startup Target"},
+      {"command":"zyn.newProject","title":"New Project (Template Wizard)"},
+      {"command":"zyn.addPackage","title":"Add Package (vcpkg/Conan)"},
+      {"command":"zyn.toolchainDoctor","title":"Toolchain Doctor"},
+      {"command":"zyn.showHome","title":"Zyn Home (Welcome)"},
+      {"command":"zyn.showPackages","title":"Zyn Packages"},
+      {"command":"zyn.showProfiler","title":"Zyn Profiler"},
+      {"command":"zyn.showPresets","title":"CMake Presets Editor"},
+      {"command":"zyn.runStartup","title":"Run Startup Target"}
+    ],
+    "configuration": {
+      "title": "zynC++",
+      "properties": {
+        "zyn.ui.showHome": { "type": "boolean", "default": true, "description": "Hiện Zyn Home khi mở workspace" },
+        "zyn.build.configuration": { "type": "string", "default": "Debug", "enum": ["Debug","Release","RelWithDebInfo","MinSizeRel"], "description": "Cấu hình build" },
+        "zyn.build.platform": { "type": "string", "default": "x64", "enum": ["x86","x64","arm64"], "description": "Nền tảng" },
+        "zyn.build.kit": { "type": "string", "default": "auto", "enum": ["auto","MSVC","Clang","GCC"], "description": "Bộ compiler" }
+      }
+    },
+    "viewsContainers": {
+      "panel": [
+        { "id": "zynHomeContainer", "title": "Zyn Home", "icon": "media/zyn.svg" },
+        { "id": "zynPackagesContainer", "title": "Zyn Packages", "icon": "media/package.svg" },
+        { "id": "zynProfilerContainer", "title": "Zyn Profiler", "icon": "media/fire.svg" },
+        { "id": "zynPresetsContainer", "title": "CMake Presets", "icon": "media/cmake.svg" }
+      ]
+    },
+    "views": {
+      "explorer": [{ "id": "zynSolution", "name": "Solution" }],
+      "panel": [
+        { "id": "zynHome", "name": "Welcome", "when": "" },
+        { "id": "zynPackages", "name": "Packages", "when": "" },
+        { "id": "zynProfiler", "name": "Profiler", "when": "" },
+        { "id": "zynPresets", "name": "Presets", "when": "" }
+      ]
+    },
+    "menus": {
+      "view/item/context": [
+        { "command": "zyn.runStartup", "when": "view == zynSolution && viewItem == executableTarget", "group": "inline@1" },
+        { "command": "zyn.debug", "when": "view == zynSolution && viewItem == executableTarget", "group": "inline@2" },
+        { "command": "zyn.build", "when": "view == zynSolution && viewItem =~ /project|executableTarget/", "group": "inline@3" },
+        { "command": "zyn.addPackage", "when": "view == zynSolution && viewItem == project", "group": "navigation@4" },
+        { "command": "zyn.openSolution", "when": "view == zynSolution && viewItem == solution", "group": "navigation@5" }
+      ],
+      "commandPalette": [
+        { "command": "zyn.showHome", "when": "true" }
+      ]
+    },
+    "walkthroughs": [
+      {
+        "id": "zynWalkthrough",
+        "title": "Getting started with zynC++",
+        "description": "Detect Toolchain → Open Project → Build → Debug → Add Package → Run Tests",
+        "steps": [
+          { "id": "toolchain", "title": "Detect Toolchain", "description": "Chạy Toolchain Doctor", "media": { "image": { "path": "media/walk/toolchain.png", "altText": "Toolchain" } } },
+          { "id": "open", "title": "Open Project", "description": "Mở .sln hoặc CMake", "media": { "image": { "path": "media/walk/open.png", "altText": "Open" } } },
+          { "id": "build", "title": "Build", "description": "Nhấn Build", "media": { "image": { "path": "media/walk/build.png", "altText": "Build" } } },
+          { "id": "debug", "title": "Debug", "description": "Nhấn Debug", "media": { "image": { "path": "media/walk/debug.png", "altText": "Debug" } } }
+        ]
+      }
+    ],
+    "keybindings": [
+      { "command": "zyn.build", "key": "ctrl+b", "mac": "cmd+b", "when": "editorTextFocus" },
+      { "command": "zyn.setConfiguration", "key": "ctrl+shift+c", "mac": "cmd+shift+c" }
+    ],
+    "problemMatchers": [
+      { "name":"zyn-msvc", "owner":"cpp", "fileLocation":"absolute", "pattern":[{"regexp":"^(.*)\\((\\d+),(\\d+)\\): (fatal error|error|warning) ([A-Z]+\\d+): (.*)$","file":1,"line":2,"column":3,"severity":4,"code":5,"message":6}]},
+      { "name":"zyn-clang", "owner":"cpp", "fileLocation":"absolute", "pattern":[{"regexp":"^(.*):(\\d+):(\\d+): (fatal error|error|warning): (.*)$","file":1,"line":2,"column":3,"severity":4,"message":5}]}
+    ]
+  },
+  "extensionDependencies": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "vadimcn.vscode-lldb"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js",
+    "clean": "rimraf dist",
+    "package": "vsce package -o ../../zyn-cpp-core-0.1.0.vsix",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lehungquangminh/zyncpp.git"
+  }
+}
+
+

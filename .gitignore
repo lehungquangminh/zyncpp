@@ -1,0 +1,15 @@
+node_modules/
+dist/
+out/
+*.vsix
+.vscode-test/
+.pytest_cache/
+.cache/
+*.log
+build/
+packages/**/dist/
+examples/**/build/
+compile_commands.json
+.clangd
+
+

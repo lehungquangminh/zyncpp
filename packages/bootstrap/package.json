@@ -1,0 +1,26 @@
+{
+  "name": "zyn-cpp-bootstrap",
+  "version": "0.1.0",
+  "description": "Portable toolchain installer for zynC++ (clang/clangd, cmake, ninja, vcpkg, conan)",
+  "type": "commonjs",
+  "main": "dist/installer.js",
+  "bin": {
+    "zyncpp-bootstrap": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "esbuild src/installer.ts --bundle --platform=node --outfile=dist/installer.js && esbuild src/cli.ts --bundle --platform=node --outfile=dist/cli.js",
+    "clean": "rimraf dist",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.4",
+    "decompress": "^4.2.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  }
+}
+
+

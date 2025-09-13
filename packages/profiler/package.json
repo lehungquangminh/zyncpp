@@ -1,0 +1,31 @@
+{
+  "name": "zyn-cpp-profiler",
+  "displayName": "zynC++ Profiler",
+  "publisher": "zynther",
+  "version": "0.1.0",
+  "description": "Lightweight wrappers for perf/ETW/instruments with flamegraph webview",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:zyn.profiler.start", "onCommand:zyn.profiler.report"],
+  "contributes": {
+    "commands": [
+      {"command":"zyn.profiler.start","title":"Start Profiling"},
+      {"command":"zyn.profiler.report","title":"Show Profiling Report"}
+    ]
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js",
+    "clean": "rimraf dist",
+    "package": "vsce package -o ../../zyn-cpp-profiler-0.1.0.vsix",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  },
+  "repository": { "type": "git", "url": "git+ssh://git@github.com/lehungquangminh/zyncpp.git" }
+}
+
+

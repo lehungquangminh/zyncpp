@@ -1,0 +1,30 @@
+{
+  "name": "zyn-cpp-templates",
+  "displayName": "zynC++ Templates",
+  "publisher": "zynther",
+  "version": "0.1.0",
+  "description": "Project templates for CMake and MSBuild",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:zyn.newProject"],
+  "contributes": {
+    "commands": [
+      {"command":"zyn.newProject","title":"New Project (Template Wizard)"}
+    ]
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js",
+    "clean": "rimraf dist",
+    "package": "vsce package -o ../../zyn-cpp-templates-0.1.0.vsix",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  },
+  "repository": { "type": "git", "url": "git+ssh://git@github.com/lehungquangminh/zyncpp.git" }
+}
+
+

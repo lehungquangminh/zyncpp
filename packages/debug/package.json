@@ -1,0 +1,26 @@
+{
+  "name": "zyn-cpp-debug",
+  "displayName": "zynC++ Debug",
+  "publisher": "zynther",
+  "version": "0.1.0",
+  "description": "Debug Adapter wiring for cppvsdbg/lldb/gdb",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:zyn.debug"],
+  "contributes": {},
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js",
+    "clean": "rimraf dist",
+    "package": "vsce package -o ../../zyn-cpp-debug-0.1.0.vsix",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  },
+  "repository": { "type": "git", "url": "git+ssh://git@github.com/lehungquangminh/zyncpp.git" }
+}
+
+

@@ -1,0 +1,31 @@
+{
+  "name": "zyn-cpp-test",
+  "displayName": "zynC++ Test",
+  "publisher": "zynther",
+  "version": "0.1.0",
+  "description": "CTest and GoogleTest/Catch2 test explorer integration",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:zyn.test.runAll", "onCommand:zyn.test.runCurrent"],
+  "contributes": {
+    "commands": [
+      {"command":"zyn.test.runAll","title":"Run All Tests"},
+      {"command":"zyn.test.runCurrent","title":"Run Current Test"}
+    ]
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js",
+    "clean": "rimraf dist",
+    "package": "vsce package -o ../../zyn-cpp-test-0.1.0.vsix",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  },
+  "repository": { "type": "git", "url": "git+ssh://git@github.com/lehungquangminh/zyncpp.git" }
+}
+
+

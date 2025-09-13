@@ -1,0 +1,35 @@
+{
+  "name": "zyncpp-suite",
+  "displayName": "zynC++ Suite",
+  "publisher": "zynther",
+  "version": "0.1.0",
+  "description": "Extension Pack for zynC++",
+  "engines": { "vscode": "^1.93.0" },
+  "categories": ["Extension Packs"],
+  "extensionPack": [
+    "zynther.zyn-cpp-core",
+    "zynther.zyn-cpp-build",
+    "zynther.zyn-cpp-debug",
+    "zynther.zyn-cpp-intellisense",
+    "zynther.zyn-cpp-test",
+    "zynther.zyn-cpp-pkg",
+    "zynther.zyn-cpp-profiler",
+    "zynther.zyn-cpp-templates",
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "vadimcn.vscode-lldb"
+  ],
+  "scripts": {
+    "build": "node -e \"console.log('suite built')\"",
+    "clean": "rimraf dist || true",
+    "package": "vsce package -o ../../zyn-cpp-suite-0.1.0.vsix",
+    "test": "node ../../tools/test/placeholder.js"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "vsce": "^2.15.0"
+  },
+  "repository": { "type": "git", "url": "git+ssh://git@github.com/lehungquangminh/zyncpp.git" }
+}
+
+

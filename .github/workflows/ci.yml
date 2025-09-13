@@ -1,0 +1,54 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.9.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Install deps
+        run: pnpm i
+      - name: Build extensions
+        run: pnpm -r build
+      - name: Bootstrap toolchains (portable)
+        run: |
+          node packages/bootstrap/dist/cli.js --ci
+          echo "BIN=$(node -e \"console.log(require('fs').readFileSync(require('os').homedir()+'/.zyncpp/toolchain.json','utf8'))\")"
+      - name: Package VSIX
+        run: pnpm -r package
+      - name: Build example (CMake)
+        run: |
+          cmake -S examples/HelloZyn -B examples/HelloZyn/build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+          cmake --build examples/HelloZyn/build -j 2
+      - name: Debug smoke (headless)
+        if: matrix.os != 'windows-latest'
+        run: |
+          echo "// breakpoint smoke" >> examples/HelloZyn/src/main.cpp
+          cmake --build examples/HelloZyn/build -j 2
+          examples/HelloZyn/build/app || true
+      - name: Run ctest
+        run: |
+          cd examples/HelloZyn/build
+          ctest -j 2 --output-on-failure
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsix-${{ matrix.os }}
+          path: "*.vsix"
+
+
