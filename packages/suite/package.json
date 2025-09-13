@@ -1,7 +1,7 @@
 {
   "name": "zyncpp-suite",
   "displayName": "zynC++ Suite",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "Extension Pack for zynC++",
   "engines": { "vscode": "^1.93.0" },

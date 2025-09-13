@@ -1,7 +1,7 @@
 {
   "name": "zyn-cpp-profiler",
   "displayName": "zynC++ Profiler",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "Lightweight wrappers for perf/ETW/instruments with flamegraph webview",
   "engines": { "vscode": "^1.93.0" },

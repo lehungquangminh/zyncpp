@@ -1,7 +1,7 @@
 {
   "name": "zyn-cpp-debug",
   "displayName": "zynC++ Debug",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "Debug Adapter wiring for cppvsdbg/lldb/gdb",
   "engines": { "vscode": "^1.93.0" },

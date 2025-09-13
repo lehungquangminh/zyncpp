@@ -1,7 +1,7 @@
 {
   "name": "zyn-cpp-test",
   "displayName": "zynC++ Test",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "CTest and GoogleTest/Catch2 test explorer integration",
   "engines": { "vscode": "^1.93.0" },

@@ -1,7 +1,7 @@
 {
   "name": "zyn-cpp-core",
   "displayName": "zynC++ Core",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "Core extension: Solution explorer, commands, status bar, toolchain doctor",
   "engines": { "vscode": "^1.93.0" },

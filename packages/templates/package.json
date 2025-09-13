@@ -1,7 +1,7 @@
 {
   "name": "zyn-cpp-templates",
   "displayName": "zynC++ Templates",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "Project templates for CMake and MSBuild",
   "engines": { "vscode": "^1.93.0" },

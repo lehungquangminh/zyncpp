@@ -1,7 +1,7 @@
 {
   "name": "zyn-cpp-intellisense",
   "displayName": "zynC++ IntelliSense",
-  "publisher": "zynther",
+  "publisher": "lehungquangminh",
   "version": "0.1.0",
   "description": "clangd integration with compile_commands.json generation",
   "engines": { "vscode": "^1.93.0" },
