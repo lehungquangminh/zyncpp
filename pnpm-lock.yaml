@@ -80,6 +80,10 @@ importers:
         version: 5.9.2
 
   packages/core:
+    dependencies:
+      zyn-cpp-bootstrap:
+        specifier: workspace:*
+        version: link:../bootstrap
     devDependencies:
       esbuild:
         specifier: ^0.23.0

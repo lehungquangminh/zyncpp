@@ -1,0 +1,591 @@
+build (ubuntu-latest)	Set up job	﻿2025-09-13T15:53:11.9268188Z Current runner version: '2.328.0'
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9293552Z ##[group]Runner Image Provisioner
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9294303Z Hosted Compute Agent
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9294919Z Version: 20250829.383
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9295521Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9296215Z Build Date: 2025-08-29T13:48:48Z
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9296751Z ##[endgroup]
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9297386Z ##[group]Operating System
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9297910Z Ubuntu
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9298374Z 24.04.3
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9298900Z LTS
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9299319Z ##[endgroup]
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9299787Z ##[group]Runner Image
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9300375Z Image: ubuntu-24.04
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9301198Z Version: 20250907.24.1
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9302240Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9303690Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9305604Z ##[endgroup]
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9307312Z ##[group]GITHUB_TOKEN Permissions
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9309543Z Contents: read
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9310184Z Metadata: read
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9311018Z Packages: read
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9311495Z ##[endgroup]
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9313925Z Secret source: Actions
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9314959Z Prepare workflow directory
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9629086Z Prepare all required actions
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:11.9667266Z Getting action download info
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:12.3104214Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:12.4710271Z Download action repository 'pnpm/action-setup@v4' (SHA:a7487c7e89a18df4991f7f222e4898a00d66ddda)
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:12.7159121Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:12.8504479Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build (ubuntu-latest)	Set up job	2025-09-13T15:53:13.0491148Z Complete job name: build (ubuntu-latest)
+build (ubuntu-latest)	Run actions/checkout@v4	﻿2025-09-13T15:53:13.1202984Z ##[group]Run actions/checkout@v4
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1203879Z with:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1204301Z   repository: lehungquangminh/zyncpp
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1205002Z   token: ***
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1205407Z   ssh-strict: true
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1205813Z   ssh-user: git
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1206226Z   persist-credentials: true
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1206682Z   clean: true
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1207084Z   sparse-checkout-cone-mode: true
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1207584Z   fetch-depth: 1
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1207981Z   fetch-tags: false
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1208391Z   show-progress: true
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1208817Z   lfs: false
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1209247Z   submodules: false
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1209661Z   set-safe-directory: true
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.1210342Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2265178Z Syncing repository: lehungquangminh/zyncpp
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2267001Z ##[group]Getting Git version info
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2267723Z Working directory is '/home/runner/work/zyncpp/zyncpp'
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2268750Z [command]/usr/bin/git version
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2366119Z git version 2.51.0
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2391781Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2405927Z Temporarily overriding HOME='/home/runner/work/_temp/d9ffdb48-e63e-4769-b812-67621e73c446' before making global git config changes
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2407451Z Adding repository directory to the temporary git global config as a safe directory
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2417840Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zyncpp/zyncpp
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2453540Z Deleting the contents of '/home/runner/work/zyncpp/zyncpp'
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2457898Z ##[group]Initializing the repository
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2462711Z [command]/usr/bin/git init /home/runner/work/zyncpp/zyncpp
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2579589Z hint: Using 'master' as the name for the initial branch. This default branch name
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2581466Z hint: is subject to change. To configure the initial branch name to use in all
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2582731Z hint: of your new repositories, which will suppress this warning, call:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2583999Z hint:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2584685Z hint: 	git config --global init.defaultBranch <name>
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2585496Z hint:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2586619Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2588474Z hint: 'development'. The just-created branch can be renamed via this command:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2589951Z hint:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2590989Z hint: 	git branch -m <name>
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2591921Z hint:
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2593035Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2594895Z Initialized empty Git repository in /home/runner/work/zyncpp/zyncpp/.git/
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2598086Z [command]/usr/bin/git remote add origin https://github.com/lehungquangminh/zyncpp
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2638263Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2639626Z ##[group]Disabling automatic garbage collection
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2643178Z [command]/usr/bin/git config --local gc.auto 0
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2671604Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2672975Z ##[group]Setting up auth
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2679022Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.2709891Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.3023058Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.3052838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.3268873Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.3302898Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.3304728Z ##[group]Fetching the repository
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.3322214Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +301308c044385c200079d5e4ba33ad73c26099e5:refs/remotes/origin/main
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5024840Z From https://github.com/lehungquangminh/zyncpp
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5025852Z  * [new ref]         301308c044385c200079d5e4ba33ad73c26099e5 -> origin/main
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5054503Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5055246Z ##[group]Determining the checkout info
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5056703Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5061976Z [command]/usr/bin/git sparse-checkout disable
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5101512Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5128058Z ##[group]Checking out the ref
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5131508Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5238061Z Switched to a new branch 'main'
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5240762Z branch 'main' set up to track 'origin/main'.
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5246839Z ##[endgroup]
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5281508Z [command]/usr/bin/git log -1 --format=%H
+build (ubuntu-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5303127Z 301308c044385c200079d5e4ba33ad73c26099e5
+build (ubuntu-latest)	Run pnpm/action-setup@v4	﻿2025-09-13T15:53:13.5499352Z ##[group]Run pnpm/action-setup@v4
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.5499945Z with:
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.5500322Z   dest: ~/setup-pnpm
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.5501000Z   run_install: null
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.5501441Z   package_json_file: package.json
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.5501943Z   standalone: false
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.5502344Z ##[endgroup]
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.6038692Z ##[group]Running self-installer...
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.4273311Z Progress: resolved 1, reused 0, downloaded 0, added 0
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.4388380Z Packages: +1
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.4392069Z +
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8231141Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8547130Z 
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8547665Z dependencies:
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8548671Z + pnpm 9.0.0 (10.16.0 is available)
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8549045Z 
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8581066Z Done in 1s
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8753375Z ##[endgroup]
+build (ubuntu-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:14.8756863Z Installation Completed!
+build (ubuntu-latest)	Run actions/setup-node@v4	﻿2025-09-13T15:53:14.8910069Z ##[group]Run actions/setup-node@v4
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8910401Z with:
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8910897Z   node-version: 20
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8911142Z   cache: pnpm
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8911359Z   always-auth: false
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8911594Z   check-latest: false
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8911961Z   token: ***
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8912215Z env:
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8912484Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.8912811Z ##[endgroup]
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:15.0653593Z Found in cache @ /opt/hostedtoolcache/node/20.19.5/x64
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:15.0660229Z ##[group]Environment details
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:17.7186928Z node: v20.19.5
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:17.7187387Z npm: 10.8.2
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:17.7187660Z yarn: 1.22.22
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:17.7188428Z ##[endgroup]
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:17.7212068Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:18.2283490Z /home/runner/setup-pnpm/node_modules/.bin/store/v3
+build (ubuntu-latest)	Run actions/setup-node@v4	2025-09-13T15:53:18.3115259Z pnpm cache is not found
+build (ubuntu-latest)	Install deps	﻿2025-09-13T15:53:18.3215211Z ##[group]Run pnpm i
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.3215486Z [36;1mpnpm i[0m
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.3357310Z shell: /usr/bin/bash -e {0}
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.3357559Z env:
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.3357787Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.3358085Z ##[endgroup]
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.7403656Z Scope: all 10 workspace projects
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.8027339Z Lockfile is up to date, resolution step is skipped
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.8485442Z Progress: resolved 1, reused 0, downloaded 0, added 0
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.9730685Z Packages: +612
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:18.9732222Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:19.8511969Z Progress: resolved 612, reused 0, downloaded 181, added 177
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:20.8523301Z Progress: resolved 612, reused 0, downloaded 422, added 420
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.3423307Z Progress: resolved 612, reused 0, downloaded 612, added 612, done
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.5840345Z .../node_modules/@vscode/vsce-sign postinstall$ node ./src/postinstall.js
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.5949109Z .../keytar@7.9.0/node_modules/keytar install$ prebuild-install || npm run build
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.5953922Z .../esbuild@0.23.1/node_modules/esbuild postinstall$ node install.js
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.6407256Z .../node_modules/@vscode/vsce-sign postinstall: Done
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.6572686Z .../esbuild@0.23.1/node_modules/esbuild postinstall: Done
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:21.7800501Z .../keytar@7.9.0/node_modules/keytar install: Done
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5063488Z 
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5064244Z devDependencies:
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5065297Z + @semantic-release/changelog 6.0.3
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5067061Z + @semantic-release/exec 6.0.3
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5067538Z + @semantic-release/git 10.0.1
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5068035Z + @semantic-release/github 10.3.5
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5068524Z + @semantic-release/npm 11.0.3
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5068906Z + esbuild 0.23.1
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5069215Z + husky 9.1.7
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5069535Z + lint-staged 15.5.2
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5069854Z + ovsx 0.9.5
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5070168Z + prettier 3.6.2
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5070514Z + semantic-release 24.2.8
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5071206Z + typescript 5.9.2
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5071497Z + vsce 2.15.0
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.5071667Z 
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.8589647Z . prepare$ husky install
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.9693257Z . prepare: husky - install command is DEPRECATED
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:22.9697964Z . prepare: Done
+build (ubuntu-latest)	Install deps	2025-09-13T15:53:23.1753101Z Done in 4.8s
+build (ubuntu-latest)	Build extensions	﻿2025-09-13T15:53:23.2147544Z ##[group]Run pnpm -r build
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.2147853Z [36;1mpnpm -r build[0m
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.2177098Z shell: /usr/bin/bash -e {0}
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.2177311Z env:
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.2177529Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.2177960Z ##[endgroup]
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6208475Z Scope: 9 of 10 workspace projects
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6236262Z packages/bootstrap build$ esbuild src/installer.ts --bundle --platform=node --outfile=dist/installer.js && esbuild src/cli.ts --bundle --platform=node --outfile=dist/cli.js
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6241694Z packages/core build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6245815Z packages/debug build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6249946Z packages/intellisense build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6542956Z packages/core build: ✘ [ERROR] Could not resolve "zyn-cpp-bootstrap"
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6544419Z packages/core build:     src/toolchainDoctor/webview/panel.ts:3:27:
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6554994Z packages/core build:       3 │ import { runInstall } from 'zyn-cpp-bootstrap';
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6563302Z packages/core build:         ╵                            ~~~~~~~~~~~~~~~~~~~
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6573727Z packages/core build:   You can mark the path "zyn-cpp-bootstrap" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6583298Z packages/core build: 1 error
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6605694Z packages/debug build:   dist/extension.js  4.4kb
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6623445Z packages/debug build: ⚡ Done in 5ms
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6626086Z packages/intellisense build:   dist/extension.js  3.0kb
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6629067Z packages/intellisense build: ⚡ Done in 3ms
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6656089Z packages/intellisense build: Done
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6656916Z packages/debug build: Done
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6657685Z packages/core build: Failed
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6677095Z /home/runner/work/zyncpp/zyncpp/packages/core:
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6680014Z  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  zyn-cpp-core@0.1.0 build: `esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js`
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6681374Z Exit status 1
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6717837Z packages/pkg build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6723753Z packages/profiler build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6729703Z packages/suite build$ node -e "console.log('suite built')"
+build (ubuntu-latest)	Build extensions	2025-09-13T15:53:23.6975007Z ##[error]Process completed with exit code 1.
+build (ubuntu-latest)	Post Run pnpm/action-setup@v4	﻿2025-09-13T15:53:23.7056528Z Post job cleanup.
+build (ubuntu-latest)	Post Run pnpm/action-setup@v4	2025-09-13T15:53:23.7591489Z Pruning is unnecessary.
+build (ubuntu-latest)	Post Run actions/checkout@v4	﻿2025-09-13T15:53:23.7698115Z Post job cleanup.
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8614505Z [command]/usr/bin/git version
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8649229Z git version 2.51.0
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8695376Z Temporarily overriding HOME='/home/runner/work/_temp/b15a0d59-af8b-44f7-b40c-37c1046a6e47' before making global git config changes
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8696643Z Adding repository directory to the temporary git global config as a safe directory
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8710243Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zyncpp/zyncpp
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8752719Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.8791569Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.9038458Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.9062336Z http.https://github.com/.extraheader
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.9079578Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build (ubuntu-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:23.9114301Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build (ubuntu-latest)	Complete job	﻿2025-09-13T15:53:23.9468101Z Cleaning up orphan processes
+build (windows-latest)	Set up job	﻿2025-09-13T15:53:10.9653122Z Current runner version: '2.328.0'
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9693605Z ##[group]Runner Image Provisioner
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9694348Z Hosted Compute Agent
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9694808Z Version: 20250829.383
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9695336Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9696046Z Build Date: 2025-08-29T13:48:48Z
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9696533Z ##[endgroup]
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9696982Z ##[group]Operating System
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9697485Z Microsoft Windows Server 2022
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9697996Z 10.0.20348
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9698368Z Datacenter
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9698786Z ##[endgroup]
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9699174Z ##[group]Runner Image
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9699619Z Image: windows-2022
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9700067Z Version: 20250907.29.1
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9700968Z Included Software: https://github.com/actions/runner-images/blob/win22/20250907.29/images/windows/Windows2022-Readme.md
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9702224Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20250907.29
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9704218Z ##[endgroup]
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9705521Z ##[group]GITHUB_TOKEN Permissions
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9707223Z Contents: read
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9707674Z Metadata: read
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9708156Z Packages: read
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9708550Z ##[endgroup]
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9710766Z Secret source: Actions
+build (windows-latest)	Set up job	2025-09-13T15:53:10.9711412Z Prepare workflow directory
+build (windows-latest)	Set up job	2025-09-13T15:53:11.0062983Z Prepare all required actions
+build (windows-latest)	Set up job	2025-09-13T15:53:11.0116318Z Getting action download info
+build (windows-latest)	Set up job	2025-09-13T15:53:11.3639206Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+build (windows-latest)	Set up job	2025-09-13T15:53:11.4848588Z Download action repository 'pnpm/action-setup@v4' (SHA:a7487c7e89a18df4991f7f222e4898a00d66ddda)
+build (windows-latest)	Set up job	2025-09-13T15:53:12.1305885Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build (windows-latest)	Set up job	2025-09-13T15:53:12.2820580Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build (windows-latest)	Set up job	2025-09-13T15:53:12.6073392Z Complete job name: build (windows-latest)
+build (windows-latest)	Run actions/checkout@v4	﻿2025-09-13T15:53:12.7842747Z ##[group]Run actions/checkout@v4
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7844047Z with:
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7844726Z   repository: lehungquangminh/zyncpp
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7845843Z   token: ***
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7846508Z   ssh-strict: true
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7847182Z   ssh-user: git
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7847877Z   persist-credentials: true
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7848701Z   clean: true
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7849412Z   sparse-checkout-cone-mode: true
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7850237Z   fetch-depth: 1
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7850921Z   fetch-tags: false
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7851607Z   show-progress: true
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7852306Z   lfs: false
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7852943Z   submodules: false
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7853655Z   set-safe-directory: true
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.7854608Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.9451707Z Syncing repository: lehungquangminh/zyncpp
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.9454081Z ##[group]Getting Git version info
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.9455124Z Working directory is 'D:\a\zyncpp\zyncpp'
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.0769348Z [command]"C:\Program Files\Git\bin\git.exe" version
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5173393Z git version 2.51.0.windows.1
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5219875Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5238605Z Temporarily overriding HOME='D:\a\_temp\2251ab55-6a75-409d-a605-85da33f504b9' before making global git config changes
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5240845Z Adding repository directory to the temporary git global config as a safe directory
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5249598Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\zyncpp\zyncpp
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5956370Z Deleting the contents of 'D:\a\zyncpp\zyncpp'
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5961841Z ##[group]Initializing the repository
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.5971398Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\zyncpp\zyncpp
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7028636Z Initialized empty Git repository in D:/a/zyncpp/zyncpp/.git/
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7060097Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/lehungquangminh/zyncpp
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7556520Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7558457Z ##[group]Disabling automatic garbage collection
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7565835Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7792685Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7793868Z ##[group]Setting up auth
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.7812995Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:13.8050693Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:15.5528183Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:15.5758364Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:16.0018241Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:16.0247145Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:16.0248015Z ##[group]Fetching the repository
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:16.0261457Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +301308c044385c200079d5e4ba33ad73c26099e5:refs/remotes/origin/main
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.3477746Z From https://github.com/lehungquangminh/zyncpp
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.3478282Z  * [new ref]         301308c044385c200079d5e4ba33ad73c26099e5 -> origin/main
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.3808456Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.3808885Z ##[group]Determining the checkout info
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.3811307Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.3820856Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.4269772Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.4476959Z ##[group]Checking out the ref
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.4484854Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.5377707Z branch 'main' set up to track 'origin/main'.
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.5383543Z Switched to a new branch 'main'
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.5405756Z ##[endgroup]
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.5735567Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+build (windows-latest)	Run actions/checkout@v4	2025-09-13T15:53:17.5929576Z 301308c044385c200079d5e4ba33ad73c26099e5
+build (windows-latest)	Run pnpm/action-setup@v4	﻿2025-09-13T15:53:17.6240196Z ##[group]Run pnpm/action-setup@v4
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.6240530Z with:
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.6240716Z   dest: ~/setup-pnpm
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.6240901Z   run_install: null
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.6241081Z   package_json_file: package.json
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.6241332Z   standalone: false
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.6241493Z ##[endgroup]
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:17.7028620Z ##[group]Running self-installer...
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:18.4160613Z Progress: resolved 1, reused 0, downloaded 0, added 0
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:18.4297022Z Packages: +1
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:18.4297316Z +
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:20.8830603Z Progress: resolved 1, reused 0, downloaded 1, added 0
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.6304917Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7571614Z 
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7571981Z dependencies:
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7572360Z + pnpm 9.0.0 (10.16.0 is available)
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7572660Z 
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7673468Z Done in 3.8s
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7847575Z ##[endgroup]
+build (windows-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:21.7852643Z Installation Completed!
+build (windows-latest)	Run actions/setup-node@v4	﻿2025-09-13T15:53:21.8101647Z ##[group]Run actions/setup-node@v4
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8101950Z with:
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8102113Z   node-version: 20
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8102281Z   cache: pnpm
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8103152Z   always-auth: false
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8103326Z   check-latest: false
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8103639Z   token: ***
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8103808Z env:
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8161702Z   PNPM_HOME: C:\Users\runneradmin\setup-pnpm\node_modules\.bin
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:21.8162012Z ##[endgroup]
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:22.0700925Z Found in cache @ C:\hostedtoolcache\windows\node\20.19.5\x64
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:22.0710520Z ##[group]Environment details
+build (windows-latest)	Run actions/setup-node@v4	2025-09-13T15:53:25.5746980Z ##[error]The operation was canceled.
+build (windows-latest)	Post Run pnpm/action-setup@v4	﻿2025-09-13T15:53:25.6403603Z Post job cleanup.
+build (windows-latest)	Post Run pnpm/action-setup@v4	2025-09-13T15:53:25.7740979Z Pruning is unnecessary.
+build (windows-latest)	Post Run actions/checkout@v4	﻿2025-09-13T15:53:25.8773248Z Post job cleanup.
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.1748431Z [command]"C:\Program Files\Git\bin\git.exe" version
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.2018159Z git version 2.51.0.windows.1
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.2089467Z Temporarily overriding HOME='D:\a\_temp\7b67c601-b1f8-4939-bef8-f942c85e02ed' before making global git config changes
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.2090770Z Adding repository directory to the temporary git global config as a safe directory
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.2101441Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\zyncpp\zyncpp
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.2411168Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.2687773Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.7266158Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.7466021Z http.https://github.com/.extraheader
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.7500116Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+build (windows-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:26.7770789Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+build (windows-latest)	Complete job	﻿2025-09-13T15:53:27.2778464Z Cleaning up orphan processes
+build (macos-latest)	Set up job	﻿2025-09-13T15:53:09.3811870Z Current runner version: '2.328.0'
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3827060Z ##[group]Runner Image Provisioner
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3827570Z Hosted Compute Agent
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3827910Z Version: 20250912.392
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3828280Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3828700Z Build Date: 2025-09-12T15:23:14Z
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3829060Z ##[endgroup]
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3829380Z ##[group]Operating System
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3829730Z macOS
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3830010Z 15.6
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3830290Z 24G84
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3830570Z ##[endgroup]
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3830870Z ##[group]Runner Image
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3831190Z Image: macos-15-arm64
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3831500Z Version: 20250911.2324
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3832180Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20250911.2324/images/macos/macos-15-arm64-Readme.md
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3833140Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20250911.2324
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3833830Z ##[endgroup]
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3834510Z ##[group]GITHUB_TOKEN Permissions
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3835510Z Contents: read
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3835810Z Metadata: read
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3836110Z Packages: read
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3836410Z ##[endgroup]
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3837640Z Secret source: Actions
+build (macos-latest)	Set up job	2025-09-13T15:53:09.3838030Z Prepare workflow directory
+build (macos-latest)	Set up job	2025-09-13T15:53:09.4050110Z Prepare all required actions
+build (macos-latest)	Set up job	2025-09-13T15:53:09.4076060Z Getting action download info
+build (macos-latest)	Set up job	2025-09-13T15:53:09.8261210Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+build (macos-latest)	Set up job	2025-09-13T15:53:10.0392550Z Download action repository 'pnpm/action-setup@v4' (SHA:a7487c7e89a18df4991f7f222e4898a00d66ddda)
+build (macos-latest)	Set up job	2025-09-13T15:53:11.1248570Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build (macos-latest)	Set up job	2025-09-13T15:53:11.2070450Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build (macos-latest)	Set up job	2025-09-13T15:53:11.3817730Z Complete job name: build (macos-latest)
+build (macos-latest)	Run actions/checkout@v4	﻿2025-09-13T15:53:11.4314290Z ##[group]Run actions/checkout@v4
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4315150Z with:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4315700Z   repository: lehungquangminh/zyncpp
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4316650Z   token: ***
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4317170Z   ssh-strict: true
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4317710Z   ssh-user: git
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4318270Z   persist-credentials: true
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4318900Z   clean: true
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4319470Z   sparse-checkout-cone-mode: true
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4320150Z   fetch-depth: 1
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4320700Z   fetch-tags: false
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4321250Z   show-progress: true
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4321820Z   lfs: false
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4322330Z   submodules: false
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4322890Z   set-safe-directory: true
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.4323610Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.7290620Z Syncing repository: lehungquangminh/zyncpp
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.7292910Z ##[group]Getting Git version info
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.7294180Z Working directory is '/Users/runner/work/zyncpp/zyncpp'
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.7295760Z [command]/opt/homebrew/bin/git version
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8136690Z git version 2.50.1
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8166370Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8173760Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/0f94285e-69dd-4ac2-9d54-7e79f4e11a86/.gitconfig'
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8193250Z Temporarily overriding HOME='/Users/runner/work/_temp/0f94285e-69dd-4ac2-9d54-7e79f4e11a86' before making global git config changes
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8273140Z Adding repository directory to the temporary git global config as a safe directory
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8275360Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/zyncpp/zyncpp
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8306720Z Deleting the contents of '/Users/runner/work/zyncpp/zyncpp'
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8308980Z ##[group]Initializing the repository
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8312580Z [command]/opt/homebrew/bin/git init /Users/runner/work/zyncpp/zyncpp
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8491860Z hint: Using 'master' as the name for the initial branch. This default branch name
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8494660Z hint: is subject to change. To configure the initial branch name to use in all
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8496240Z hint: of your new repositories, which will suppress this warning, call:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8497440Z hint:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8498290Z hint: 	git config --global init.defaultBranch <name>
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8499260Z hint:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8500180Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8501640Z hint: 'development'. The just-created branch can be renamed via this command:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8502720Z hint:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8503450Z hint: 	git branch -m <name>
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8507080Z hint:
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8508280Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8510070Z Initialized empty Git repository in /Users/runner/work/zyncpp/zyncpp/.git/
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8513060Z [command]/opt/homebrew/bin/git remote add origin https://github.com/lehungquangminh/zyncpp
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8565780Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8566820Z ##[group]Disabling automatic garbage collection
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8567840Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8621170Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8622130Z ##[group]Setting up auth
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8625400Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.8677740Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.9519270Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:11.9573340Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.0187730Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.0244240Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.0245270Z ##[group]Fetching the repository
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.0250250Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +301308c044385c200079d5e4ba33ad73c26099e5:refs/remotes/origin/main
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6387040Z From https://github.com/lehungquangminh/zyncpp
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6388830Z  * [new ref]         301308c044385c200079d5e4ba33ad73c26099e5 -> origin/main
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6446720Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6447150Z ##[group]Determining the checkout info
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6447590Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6450850Z [command]/opt/homebrew/bin/git sparse-checkout disable
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6515750Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6571000Z ##[group]Checking out the ref
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6573120Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6742110Z Switched to a new branch 'main'
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6747940Z branch 'main' set up to track 'origin/main'.
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6751340Z ##[endgroup]
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6822460Z [command]/opt/homebrew/bin/git log -1 --format=%H
+build (macos-latest)	Run actions/checkout@v4	2025-09-13T15:53:12.6876060Z 301308c044385c200079d5e4ba33ad73c26099e5
+build (macos-latest)	Run pnpm/action-setup@v4	﻿2025-09-13T15:53:12.6998210Z ##[group]Run pnpm/action-setup@v4
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.6998450Z with:
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.6998570Z   dest: ~/setup-pnpm
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.6998710Z   run_install: null
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.6998850Z   package_json_file: package.json
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.6999010Z   standalone: false
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.6999140Z ##[endgroup]
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:12.7600100Z ##[group]Running self-installer...
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.2788060Z Progress: resolved 1, reused 0, downloaded 0, added 0
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.2826580Z Packages: +1
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.2831120Z +
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9001010Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9480810Z 
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9481460Z dependencies:
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9491990Z + pnpm 9.0.0 (10.16.0 is available)
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9492370Z 
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9515390Z Done in 1s
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9631450Z ##[endgroup]
+build (macos-latest)	Run pnpm/action-setup@v4	2025-09-13T15:53:13.9655180Z Installation Completed!
+build (macos-latest)	Run actions/setup-node@v4	﻿2025-09-13T15:53:13.9796950Z ##[group]Run actions/setup-node@v4
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9797180Z with:
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9797290Z   node-version: 20
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9797450Z   cache: pnpm
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9797580Z   always-auth: false
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9797730Z   check-latest: false
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9798020Z   token: ***
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9798130Z env:
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9798300Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:13.9798500Z ##[endgroup]
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.2006420Z Found in cache @ /Users/runner/hostedtoolcache/node/20.19.5/arm64
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.2124400Z ##[group]Environment details
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.7635190Z node: v20.19.5
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.7737320Z npm: 10.8.2
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.7750020Z yarn: 1.22.22
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.7782070Z ##[endgroup]
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:14.7808320Z [command]/Users/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:15.0349120Z /Users/runner/setup-pnpm/node_modules/.bin/store/v3
+build (macos-latest)	Run actions/setup-node@v4	2025-09-13T15:53:15.2440100Z pnpm cache is not found
+build (macos-latest)	Install deps	﻿2025-09-13T15:53:15.2495600Z ##[group]Run pnpm i
+build (macos-latest)	Install deps	2025-09-13T15:53:15.2495790Z [36;1mpnpm i[0m
+build (macos-latest)	Install deps	2025-09-13T15:53:15.2533860Z shell: /bin/bash -e {0}
+build (macos-latest)	Install deps	2025-09-13T15:53:15.2534060Z env:
+build (macos-latest)	Install deps	2025-09-13T15:53:15.2534240Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+build (macos-latest)	Install deps	2025-09-13T15:53:15.2534510Z ##[endgroup]
+build (macos-latest)	Install deps	2025-09-13T15:53:15.5092340Z Scope: all 10 workspace projects
+build (macos-latest)	Install deps	2025-09-13T15:53:15.5443550Z Lockfile is up to date, resolution step is skipped
+build (macos-latest)	Install deps	2025-09-13T15:53:15.5664050Z Progress: resolved 1, reused 0, downloaded 0, added 0
+build (macos-latest)	Install deps	2025-09-13T15:53:15.6100940Z Packages: +612
+build (macos-latest)	Install deps	2025-09-13T15:53:15.6202290Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build (macos-latest)	Install deps	2025-09-13T15:53:16.5657400Z Progress: resolved 612, reused 0, downloaded 78, added 77
+build (macos-latest)	Install deps	2025-09-13T15:53:17.5678740Z Progress: resolved 612, reused 0, downloaded 197, added 182
+build (macos-latest)	Install deps	2025-09-13T15:53:18.5684060Z Progress: resolved 612, reused 0, downloaded 326, added 322
+build (macos-latest)	Install deps	2025-09-13T15:53:19.5781900Z Progress: resolved 612, reused 0, downloaded 350, added 335
+build (macos-latest)	Install deps	2025-09-13T15:53:20.5703680Z Progress: resolved 612, reused 0, downloaded 418, added 410
+build (macos-latest)	Install deps	2025-09-13T15:53:21.5712180Z Progress: resolved 612, reused 0, downloaded 555, added 543
+build (macos-latest)	Install deps	2025-09-13T15:53:21.9521830Z Progress: resolved 612, reused 0, downloaded 612, added 612, done
+build (macos-latest)	Install deps	2025-09-13T15:53:22.1449980Z .../node_modules/@vscode/vsce-sign postinstall$ node ./src/postinstall.js
+build (macos-latest)	Install deps	2025-09-13T15:53:22.1500970Z .../keytar@7.9.0/node_modules/keytar install$ prebuild-install || npm run build
+build (macos-latest)	Install deps	2025-09-13T15:53:22.1631240Z .../esbuild@0.23.1/node_modules/esbuild postinstall$ node install.js
+build (macos-latest)	Install deps	2025-09-13T15:53:22.2453890Z .../node_modules/@vscode/vsce-sign postinstall: Done
+build (macos-latest)	Install deps	2025-09-13T15:53:22.3075760Z .../esbuild@0.23.1/node_modules/esbuild postinstall: Done
+build (macos-latest)	Install deps	2025-09-13T15:53:22.7285050Z .../keytar@7.9.0/node_modules/keytar install: Done
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7123760Z 
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7225560Z devDependencies:
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7325430Z + @semantic-release/changelog 6.0.3
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7425720Z + @semantic-release/exec 6.0.3
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7528120Z + @semantic-release/git 10.0.1
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7631490Z + @semantic-release/github 10.3.5
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7730360Z + @semantic-release/npm 11.0.3
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7831890Z + esbuild 0.23.1
+build (macos-latest)	Install deps	2025-09-13T15:53:23.7934210Z + husky 9.1.7
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8035980Z + lint-staged 15.5.2
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8137110Z + ovsx 0.9.5
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8194270Z + prettier 3.6.2
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8203800Z + semantic-release 24.2.8
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8204570Z + typescript 5.9.2
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8205020Z + vsce 2.15.0
+build (macos-latest)	Install deps	2025-09-13T15:53:23.8205360Z 
+build (macos-latest)	Install deps	2025-09-13T15:53:24.1122520Z . prepare$ husky install
+build (macos-latest)	Install deps	2025-09-13T15:53:24.2448360Z . prepare: husky - install command is DEPRECATED
+build (macos-latest)	Install deps	2025-09-13T15:53:24.2966810Z . prepare: Done
+build (macos-latest)	Install deps	2025-09-13T15:53:24.3691470Z Done in 9s
+build (macos-latest)	Build extensions	﻿2025-09-13T15:53:24.4089940Z ##[group]Run pnpm -r build
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.4090390Z [36;1mpnpm -r build[0m
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.4132110Z shell: /bin/bash -e {0}
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.4132350Z env:
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.4132660Z   PNPM_HOME: /Users/runner/setup-pnpm/node_modules/.bin
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.4132940Z ##[endgroup]
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8088940Z Scope: 9 of 10 workspace projects
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8106230Z packages/bootstrap build$ esbuild src/installer.ts --bundle --platform=node --outfile=dist/installer.js && esbuild src/cli.ts --bundle --platform=node --outfile=dist/cli.js
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8109780Z packages/core build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8120790Z packages/debug build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8121930Z packages/intellisense build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8569780Z packages/core build: ✘ [ERROR] Could not resolve "zyn-cpp-bootstrap"
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8625940Z packages/core build:     src/toolchainDoctor/webview/panel.ts:3:27:
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8657950Z packages/core build:       3 │ import { runInstall } from 'zyn-cpp-bootstrap';
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8666200Z packages/core build:         ╵                            ~~~~~~~~~~~~~~~~~~~
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8678310Z packages/core build:   You can mark the path "zyn-cpp-bootstrap" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8689040Z packages/core build: 1 error
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8701950Z packages/core build: Failed
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8712600Z /Users/runner/work/zyncpp/zyncpp/packages/core:
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8725260Z  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  zyn-cpp-core@0.1.0 build: `esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js`
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8729110Z Exit status 1
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8731750Z packages/debug build:   dist/extension.js  4.4kb
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8735170Z packages/debug build: ⚡ Done in 3ms
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8896990Z packages/pkg build$ esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8898160Z packages/intellisense build:   dist/extension.js  3.0kb
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8914960Z packages/intellisense build: ⚡ Done in 3ms
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8926510Z packages/debug build: Done
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.8931060Z packages/intellisense build: Done
+build (macos-latest)	Build extensions	2025-09-13T15:53:24.9279790Z ##[error]The operation was canceled.
+build (macos-latest)	Post Run pnpm/action-setup@v4	﻿2025-09-13T15:53:24.9347150Z Post job cleanup.
+build (macos-latest)	Post Run pnpm/action-setup@v4	2025-09-13T15:53:25.0134670Z Pruning is unnecessary.
+build (macos-latest)	Post Run actions/checkout@v4	﻿2025-09-13T15:53:25.0207740Z Post job cleanup.
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1020310Z [command]/opt/homebrew/bin/git version
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1082330Z git version 2.50.1
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1104660Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/17d29445-3ca9-4679-b687-38bbd2822ad9/.gitconfig'
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1111140Z Temporarily overriding HOME='/Users/runner/work/_temp/17d29445-3ca9-4679-b687-38bbd2822ad9' before making global git config changes
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1112090Z Adding repository directory to the temporary git global config as a safe directory
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1130580Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/zyncpp/zyncpp
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1181820Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.1236240Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.2229700Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.2230920Z http.https://github.com/.extraheader
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.2238560Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+build (macos-latest)	Post Run actions/checkout@v4	2025-09-13T15:53:25.2294820Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build (macos-latest)	Complete job	﻿2025-09-13T15:53:25.3059040Z Cleaning up orphan processes
