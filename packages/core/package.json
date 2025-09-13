@@ -97,7 +97,7 @@
   ],
   "main": "./dist/extension.js",
   "scripts": {
-    "build": "pnpm --filter zyn-cpp-bootstrap run build && esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js",
+    "build": "pnpm --filter zyn-cpp-bootstrap run build && esbuild src/extension.ts --bundle --platform=node --external:vscode --external:zyn-cpp-bootstrap --outfile=dist/extension.js",
     "clean": "rimraf dist",
     "package": "vsce package -o ../../zyn-cpp-core-0.1.0.vsix",
     "test": "node ../../tools/test/placeholder.js"

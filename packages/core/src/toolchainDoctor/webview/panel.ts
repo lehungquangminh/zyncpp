@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import { spawn } from 'child_process';
-import { runInstall } from 'zyn-cpp-bootstrap';
 
 export function showToolchainDoctor() {
   const panel = vscode.window.createWebviewPanel('zynToolchainDoctor', 'zynC++ Toolchain Doctor', vscode.ViewColumn.Active, { enableScripts: true });
@@ -12,7 +11,8 @@ export function showToolchainDoctor() {
   panel.webview.onDidReceiveMessage(async (m)=>{
     if (m?.type === 'installConsent') {
       try{
-        await runInstall({ mode: m.mode || 'guided', onEvent: (e)=> panel.webview.postMessage({ type:'progress', payload: e }) });
+        const mod = await import('zyn-cpp-bootstrap/dist/installer.js');
+        await mod.runInstall({ mode: m.mode || 'guided', onEvent: (e: any)=> panel.webview.postMessage({ type:'progress', payload: e }) });
         const detected = await detectTools();
         panel.webview.postMessage({ type: 'detected', payload: detected });
       }catch(e:any){ panel.webview.postMessage({ type:'error', message: e?.message||String(e) }); }
